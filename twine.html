@@ -9,9 +9,14 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play test.</tw-noscript></noscript></tw-story>
-<tw-storydata name="test" startnode="1" creator="Twine" creator-version="2.3.16" ifid="F752EFA7-D416-4582-8409-9EBBC45B5098" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Begin" tags="" position="50,200" size="100,100">You wake up, and realize you are no longer in your bedroom. You look around the room and you noticed the decoration is in medieval style. 
+<tw-storydata name="test" startnode="1" creator="Twine" creator-version="2.3.16" ifid="F752EFA7-D416-4582-8409-9EBBC45B5098" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body, tw-story {  
+  font-family:"AppleGothic";}</style><script role="script" id="twine-user-script" type="text/twine-javascript">var audio= document.createElement('audio');
+audio.src='https://drsfreeman.github.io/twine_alchemist/sound/Skyrim-The-Song-of-the-Dragonborn.mp3';
+audio.loop = true;
+audio.play();</script><tw-passagedata pid="1" name="Begin" tags="" position="50,200" size="100,100">You wake up, and realize you are no longer in your bedroom. You look around the room and you noticed the decoration is in medieval style. 
 As you explore the surroundings, you have discovered that there&#39;s a note on the writing desk ,and a shelf filled with glass tubes.
-
+You witnessed a meteor shower earlier, maybe the power of stars brought you here. 
+&lt;img src=https://drsfreeman.github.io/twine_alchemist/images/sky.gif&gt;
 You decide to
 [[Examine the note]]
 [[Take a closer look of the shelf]]
@@ -20,7 +25,7 @@ You decide to
 
 [[Take a closer look of the shelf]]
 [[Continue]] </tw-passagedata><tw-passagedata pid="3" name="Take a closer look of the shelf" tags="" position="250,100" size="100,100">You Noticed the tudes are filled with potions of different color, 
-&lt;img src=&quot;https://drsfreeman.github.io/twine_alchemist/images/shelf.png&quot;&gt;
+&lt;img src=&quot;https://drsfreeman.github.io/twine_alchemist/images/shelf.png&quot; width=&quot;50%&quot;&gt;
 [[Examine the note]]
 [[Continue]]</tw-passagedata><tw-passagedata pid="4" name="Suddenly, You hear someone slamming the door" tags="" position="500,225" size="100,100">You move closer to the door and ask 
 &quot;Who&#39;s out there?&quot;
@@ -46,7 +51,7 @@ You noticed the man&#39;s arm is bleeding and smoking. Part of the arm is comple
 At this moment, you realized you had chemistry class in high school. 
 
 [[You went back to the shelf and noticed there&#39;re potions and solid particles]]</tw-passagedata><tw-passagedata pid="8" name="Continue" tags="" position="375,225" size="100,100">
-&lt;img src=&quot;https://drsfreeman.github.io/twine_alchemist/images/door.png&quot;&gt;
+&lt;img src=&quot;https://drsfreeman.github.io/twine_alchemist/images/door.png&quot; width=&quot;50%&quot;&gt;
 [[Suddenly, You hear someone slamming the door]]
 &lt;audio src=&quot;https://drsfreeman.github.io/twine_alchemist/sound/knock.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="9" name="You went back to the shelf and noticed there&#39;re potions and solid particles" tags="" position="1100,175" size="100,100">The potions are of 3 color, with labels, You decide to pick one and pour it into the Crucible to make the cure.
 
@@ -109,7 +114,7 @@ You find 3 solid particles on the shelf
 (if: $SeaWater is true)[Sea Water, red-brown bubble emerges in the liquid, shortly after, a huge explosion swallowed you.]
 &lt;img src=&quot;https://drsfreeman.github.io/twine_alchemist/images/boom.png&quot;&gt;
 
-[[Your are Dead.....]]</tw-passagedata><tw-passagedata pid="16" name="Don&#39;t pick any" tags="" position="1400,600" size="100,100">You noticed there&#39;s a lightning Rune engraved on the floor, do you wish to used lightning rune to your potion?
+[[Your are Dead.....]]</tw-passagedata><tw-passagedata pid="16" name="Don&#39;t pick any" tags="" position="1406,608" size="100,100">You noticed there&#39;s a lightning Rune engraved on the floor, do you wish to used lightning rune to your potion?
 &lt;img src=&quot;https://drsfreeman.github.io/twine_alchemist/images/Lightning.png&quot;&gt;
 
 [[Yes]]
@@ -118,16 +123,25 @@ You find 3 solid particles on the shelf
 (set:$Volcano to false)
 (set:$SeaWater to false)
 (set:$Lightning to false)
-
-}</tw-passagedata><tw-passagedata pid="18" name="Your are Dead....." tags="" position="800,800" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="19" name="Yes" tags="" position="1000,800" size="100,100">
+(set:$event to(random:1,2))
+}</tw-passagedata><tw-passagedata pid="18" name="Your are Dead....." tags="" position="800,800" size="100,100">&lt;img src=&quot;https://drsfreeman.github.io/twine_alchemist/images/dead.png&quot;&gt;
+The explosion rip you apart
+</tw-passagedata><tw-passagedata pid="19" name="Yes" tags="" position="1000,800" size="100,100">
 
 After series of lightning strike, bubbles begin to emerge. 
 
-You wait till the reaction is over, and applies the potion to the wounded part. The man feels much better. </tw-passagedata><tw-passagedata pid="20" name="No" tags="" position="1200,800" size="100,100">&quot;Waaaaagh!!&quot; The man screams. &quot;It hurts so badly! Master!&quot;
-
-The man left, it appears the potion did not work.</tw-passagedata><tw-passagedata pid="21" name="You apply the solution to the wounded part" tags="" position="1400,800" size="100,100">The man feels a bit better, but it still hurt him badly. 
-Shortly after, you hear the news that the man has died because of infection.
-</tw-passagedata></tw-storydata>
+You wait till the reaction is over, and applies the potion to the wounded part. The man feels much better. </tw-passagedata><tw-passagedata pid="20" name="No" tags="" position="1200,801" size="100,100">(if:$event is 1)
+[&quot;Waaaaagh!!&quot; The man screams. &quot;It hurts so badly! Master!&quot;
+The man left, it appears the potion did not work.]
+(elseif:$event is 2)
+[The man feels a bit better, but it still hurt him badly. 
+Shortly after, you hear the news that the man has died because of infection.]
+</tw-passagedata><tw-passagedata pid="21" name="You apply the solution to the wounded part" tags="" position="1400,800" size="100,100">(if:$event is 1)
+[&quot;Waaaaagh!!&quot; The man screams. &quot;It hurts so badly! Master!&quot;
+The man left, it appears the potion did not work.]
+(elseif:$event is 2)
+[The man feels a bit better, but it still hurt him badly. 
+Shortly after, you hear the news that the man has died because of infection.]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
